@@ -8,11 +8,13 @@
 </head>
 <body>
   <%= render 'shared/navbar' %>	
+	
 	<div class="container">
+  <%= render 'shared/messages' %>
 
-	</div>
-
-	<%= yield %>
+  <%= yield %>
+	
 	<%= render 'shared/footer' %>
+</div>
 </body>
 </html>
