@@ -2,7 +2,7 @@
 
 	<div class="row">
 		<div class="col-md-4 pull-right center">
-			<%= link_to gravatar_for(@recipes.chef, size: 200), chef_path(@chef) %>
+			<%#= link_to gravatar_for(@recipes.chef, size: 200), chef_path(@chef) %>
 		<p>
 	    <h5>Brought to you by: <%= @recipe.chef.chefname %></h5>
 		</p>
@@ -19,6 +19,8 @@
       </div>
 
 			<div class="well">
+	      <p>Style: <%= render @recipe.styles %></p>
+	      <p>Ingredients: <%= render @recipe.ingredients %></p>
 				<p>
 	        <strong>Steps:</strong>
 				</p>

@@ -18,6 +18,17 @@
 	      <%= f.text_area :description, rows: 10 %>
       </p>
 
+      <strong>Styles:</strong>
+      <%= f.collection_check_boxes :style_ids, Style.all, :id, :name do |cb| %>
+        <% cb.label(class: "checkbox-inline") {cb.check_box(class: "checkbox") + cb.text} %>
+      <% end %>
+      <br><br>
+
+      <strong>Ingredients:</strong>
+      <%= f.collection_check_boxes :ingredient_ids, Style.all, :id, :name do |ing| %>
+        <% ing.label(class: "checkbox-inline") {ing.check_box(class: "checkbox") + ing.text} %>
+      <% end %>
+        <br><br>
       <p>
         <span class="picture">
           <%= f.file_field :picture, accept: 'image/jpeg, image/png, image/gif' %>
