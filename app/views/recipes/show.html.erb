@@ -48,6 +48,21 @@
 		</div>
 	</div>
 
+	<div class="row">
+  	<div class="col-md-8 pull-left">
+      <%= form_for :reviews do |f| %>
+        <p>
+          <%= f.label :review %>
+          <%= f.text_area :review %>
+        </p>
+
+	      <p>
+	      	<%= f.submit "Add Review", class: "btn btn-success" %>
+	      </p>
+	    <% end %>
+    </div>
+	</div><!-- /row> -->
+
 <h5>
 	<%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %>
 </h5>

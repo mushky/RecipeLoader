@@ -1,16 +1,25 @@
-Chefs: 
+Reviews: 
 
-What we have already:
+1. Migration to create reviews table, body, type:text_field, two foreign keys, reference chef_id, reference recipe_id [DONE]
 
-- Chef model and validations 
-- chefs table with columns chefname and email
+2. Build the review model [DONE]
 
-What we need to do:
-- Add passwords to the chefs table so chefs can be authenticated and logged in
-- Use email as log in credentials, since email is unique
-- Ability to register new chefs to use the app
-- Ability to display chefs profile
-- Ability to list chefs using the app
-- Ability for chefs to log in and out of the app
-- Restrict actions like create recipe, edit recipe, and like feature to logged in chefs only
-- Restricting edit of recipes by chefs who created the recipes
+3. Build the review controller [DONE]
+
+4. Build the associations, has_many, belongs_to [DONE]
+
+5. Test out associations in rails console
+  - recipe.reviews
+  - chef.reviews
+
+6. Recipe Show Page is place to put the Review Additions
+
+7. Add Routing for Reviews
+
+8. Authenticated Chefs can create reviews, before_action require_user
+
+9. Associate chef_id and recipe_id
+
+10. Reuse code if possible
+
+ 

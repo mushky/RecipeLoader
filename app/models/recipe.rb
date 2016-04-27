@@ -1,6 +1,7 @@
 class Recipe < ActiveRecord::Base
 	belongs_to :chef
 	has_many :likes, dependent: :destroy
+  has_many :reviews, dependent: :destroy
   
   # many to many relationship
   has_many :recipe_styles, dependent: :destroy
