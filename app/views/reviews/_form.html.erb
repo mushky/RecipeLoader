@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-md-8">
+  <%= render 'shared/page_title', title: "Write a review" %>
+	  <div class="well">
+	    <%= form_for([@recipe, @recipe.reviews.build]) do |f| %>
+	      <%= f.label :review %>
+	      <%= f.text_area :review, rows: 8, cols: 8 %>
+
+	      <%= f.submit 'Post Review', class: "btn btn-success" %>
+	    <% end %>
+	  </div>
+	</div>
+</div>

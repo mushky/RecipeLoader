@@ -47,24 +47,19 @@
 			</div>
 		</div>
 	</div>
+  
 
-	<div class="row">
-  	<div class="col-md-8 pull-left">
-      <%= form_for :reviews do |f| %>
-        <p>
-          <%= f.label :review %>
-          <%= f.text_area :review %>
-        </p>
+  <h3>Comments</h3>
 
-	      <p>
-	      	<%= f.submit "Add Review", class: "btn btn-success" %>
-	      </p>
-	    <% end %>
+  <% @recipe.reviews.each do |review| %>
+    <div class="well col-md-8">
+      <p><strong>Chef:</strong> <%= review.chef.chefname %></p>
+      <p><%= review.review %></p>
     </div>
-	</div><!-- /row> -->
+  <% end %>
 
-<h5>
-	<%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %>
-</h5>
+  <%= render 'reviews/form' %>
+
+<h5><%= link_to "Return to Recipes Listing", recipes_path, class: "btn btn-warning btn-small" %></h5>
 
 

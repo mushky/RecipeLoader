@@ -51,17 +51,6 @@ class RecipesController < ApplicationController
     end
   end
   
-  def review
-    review = Review.create(review: params[:review], chef: current_user, recipe: @recipe)
-    if review.valid?
-      flash[:success] = "Your review was added"
-      redirect_to :back
-    else
-      flash[:danger] = "There's something wrong with your review."
-      redirect_to :back
-    end
-  end
-
   def destroy
     Recipe.find(params[:id]).destroy
     flash[:success] = "Recipe Deleted"
